@@ -8,6 +8,10 @@ lazy val root = project
 
     scalaVersion := scala3Version,
 
+    scalacOptions ++= Seq(
+      "-Yindent-colons",
+    ),
+
     libraryDependencies += "org.jsoup" % "jsoup" % "1.13.1",
 
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.20" % Test,
