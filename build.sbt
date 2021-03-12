@@ -1,4 +1,4 @@
-val scala3Version = "3.0.0-M2"
+val scala3Version = "3.0.0-RC1"
 
 lazy val root = project
   .in(file("."))
@@ -14,7 +14,7 @@ lazy val root = project
 
     libraryDependencies += "org.jsoup" % "jsoup" % "1.13.1",
 
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.20" % Test,
+    libraryDependencies += "org.scalameta" %% "munit" % "0.7.22" % Test,
 
     testFrameworks += new TestFramework("munit.Framework")
   )

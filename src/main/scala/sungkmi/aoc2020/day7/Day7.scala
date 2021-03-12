@@ -3,7 +3,7 @@ package sungkmi.aoc2020.day7
 type RuleV = Map[String, Int]
 type Rule = Map[String, RuleV]
 
-extension (rule: Rule):
+extension (rule: Rule)
   def reverse: Rule = rule.foldLeft(
     Map.empty[String, RuleV] `withDefaultValue` Map.empty
   ):

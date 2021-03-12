@@ -14,7 +14,7 @@ case class ProgramState(pc: Int, acc: Int, runSet: BitSet)
 object ProgramState:
   val init: ProgramState = ProgramState(0, 0, BitSet.empty)
 
-extension (s: ProgramState):
+extension (s: ProgramState)
   def run(instruction: Instruction): ProgramState = instruction match
     case Acc(arg) => ProgramState(s.pc + 1, s.acc + arg, s.runSet + s.pc)
     case Jmp(arg) => ProgramState(s.pc + arg, s.acc, s.runSet + s.pc)

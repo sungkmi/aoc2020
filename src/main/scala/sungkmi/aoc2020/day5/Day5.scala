@@ -2,7 +2,7 @@ package sungkmi.aoc2020.day5
 
 case class Seat(row: Int, column: Int)
 
-extension (s: Seat):
+extension (s: Seat)
   def id: Int = s.row * 8 + s.column
 
 def parseSeat(s: String): Seat =

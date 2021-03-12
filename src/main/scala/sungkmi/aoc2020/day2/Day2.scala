@@ -4,7 +4,7 @@ import scala.collection.JavaConverters._
 
 case class Password(min: Int, max: Int, char: Char, value: String)
 
-extension (p: Password): 
+extension (p: Password)
   def isValid: Boolean =
     val count = p.value.count(_ == p.char)
     p.min <= count && count <= p.max
